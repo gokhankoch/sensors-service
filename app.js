@@ -6,6 +6,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
 const cors = require('cors');
+const compression = require('compression');
 
 const globalErrorHandler = require('./controllers/errorController');
 const AppError = require('./utils/appError');
@@ -46,6 +47,7 @@ app.use(
     whitelist: ['duration']
   })
 );
+app.use(compression());
 
 // mounting
 app.use('/api/v1/sensors', sensorRouter);
