@@ -11,6 +11,7 @@ const globalErrorHandler = require('./controllers/errorController');
 const AppError = require('./utils/appError');
 const sensorRouter = require('./routes/sensorRouter');
 
+// Start express app
 const app = express();
 
 app.use(cors());
