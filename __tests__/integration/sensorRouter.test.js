@@ -10,8 +10,6 @@ describe('Sensor', () => {
     expect(response.status).toBe(200);
   });
 
- 
-
   it('Create sensor', async () => {
     const response = await request.post('/api/v1/sensors').send({
       name: 'test123456',
@@ -19,7 +17,6 @@ describe('Sensor', () => {
       devicetype: 'TempHum',
       temp: 10,
       hum: 10
-      
     });
     expect(response.status).toBe(201);
   });
