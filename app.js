@@ -14,7 +14,7 @@ const sensorRouter = require('./routes/sensorRouter');
 
 // Start express app
 const app = express();
-
+//cors
 app.use(cors());
 
 // Set security HTTP headers
