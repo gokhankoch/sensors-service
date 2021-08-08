@@ -44,7 +44,7 @@ app.use(xss());
 //Prevent parameter pollution
 app.use(
   hpp({
-    whitelist: ['duration']
+  //  whitelist: ['duration']
   })
 );
 app.use(compression());
